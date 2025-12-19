@@ -1,0 +1,94 @@
+[hello.txt]
+# 폴더 만들기
+mkdir hello
+
+# 폴더 이동
+cd hello
+
+# 폴더의 목록 확인
+ls -al
+
+# 깃 저장소 생성: 최초에 한 번만
+git init
+
+# 깃 상태 확인
+git status
+
+# 깃에 관래 대상으로 포함
+#변경사항이 있을 때마다 수행
+git add hello.txt
+
+# 로컬 저장소에 저장
+# 최종적으로 변경 사항을 저장소에 반영
+git commit -m "[hello.txt] new file"
+
+# 이력 상세 확인
+git log
+
+# 이력 간략 확인
+git log --onelin
+
+# 이력 
+history
+
+# hello.txt 파일의 복사본(hellox.txt) 생성
+cp hello.txt hellox.txt
+
+
+# 현재 폴더(working directory)의 모든 내용을 반영
+# 관리대상으로 만든다.
+# 수정, 새로운 파일을 스테이지 영역으로 이동
+git add .
+
+# 깃 로그 한글이 깨지는 경우 
+git config --global core.quotepath false
+git config --global i18.commitEncoding utf-8
+git config --global i18.logOutputEncoding utf-8
+
+# add와 commit을 동시 수행
+# 조건: 한 번 관리 대상이 되었던 파일
+# 옵션: -a
+git commit -a -m "[hello.txt] 한글 깨지는 문제 수록"
+
+# 방이동
+git checkout main  / git switch
+
+git branch 가지치기
+git branch --list
+
+# 브랜치 관리대상
+# branch 생성
+git branch 브랜치명
+git branch br-1
+
+# branch 이동
+git checkout br-1
+git switch br-1
+
+# branch 삭제
+git branch -d br-1
+
+# 브랜치 생성 및  이동
+git checkout -b br-2
+
+# 브랜치 지우기
+git branch -d br-1
+
+# 브랜치 나가면서 생성하기
+git checkout -b br-2
+
+# 머지 병합
+git merge br-1
+
+# 머지 병합 취소
+git merge --abort
+
+# 태그 관리
+# 태그 목록 보기
+git tag
+
+# 태그 위치의 커미 정보 확인
+git show tag-name
+
+# 태그 생성
+git tan tag-name
