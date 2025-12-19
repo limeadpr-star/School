@@ -1,7 +1,8 @@
-[School]
+# [School]
 
-https://github.com/limeadpr-star/School.git
+### https://github.com/limeadpr-star/School.git
 
+```
 …or create a new repository on the command line
 echo "# School" >> README.md
 git init
@@ -14,3 +15,4 @@ git push -u origin main
 git remote add origin https://github.com/limeadpr-star/School.git
 git branch -M main
 git push -u origin main
+```
